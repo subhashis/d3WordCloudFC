@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WordCloud with Fisheye view</title>
+        <meta charset="UTF-8">
+        <script type="text/javascript" src="d3.js"></script>
+        <script type="text/javascript" src="d3.layout.cloud.js"></script>
+        <script type="text/javascript" src="tags.js"></script>
+        <script type="text/javascript" src="fisheye.js"></script>
+    </head>
+    <body>
+	<div id="option">
+    <input name="updateButton" 
+           type="button" 
+           value="Refresh Canvas" 
+           onclick="updateData()" />
+	</div>
+        <div id="vis"></div>
+        <script type="text/javascript" src="word-cloud.js"></script>
+
+		<label>Word Frequency: <input type="range" id="filter" min="0" max="200" value="0" step="10" onmouseup = "lowerLimtSliderChanged()" /> <output id="lowerLimitOutput">0</output></label>
+        <br/>
+        <br/>
+        <!--<div id="toppings">Toppings: 
+        <label><input type="checkbox" id="filter1" name="mushrooms" value=".40" /> mushrooms</label>
+        <label><input type="checkbox" id="filter2" name="onions" value=".30" /> onions</label>
+        <label><input type="checkbox" id="filter3"  name="black_olives" value=".40" /> black olives</label>
+        <label><input type="checkbox" id="filter4"  name="sausage" value=".50" /> sausage</label>
+        <label><input type="checkbox" id="filter5" name="pepperoni" value=".50" /> pepperoni</label>
+        </div>-->
+        <div id="LC">Lens Control: 
+        <br/>
+        <label><input type='checkbox' onclick='activateLens(this);'>Activate Lens</label>
+        <label><input type='checkbox' onclick='rotateLens(this);'>Disable Text Rotation</label>
+        </div>
+        &nbsp;
+        <label>Aperture: <input type="range" id="aperture" min="100" max="400" value="0" step="10" onmouseup = "changeLensAperture()" /> <output id="lenAperture">200</output></label>
+
+        &nbsp;
+        <label>Distortion: <input type="range" id="distortion" min="2" max="10" value="0" step="1" onmouseup = "changeLensDistortion()" /> <output id="lenDistortion">6</output></label>
+        
+
+
+
+    </body>
+	<script>
+	
+</script>
+</html>
